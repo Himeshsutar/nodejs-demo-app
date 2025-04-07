@@ -1,18 +1,18 @@
 🚀 nodejs-demo-app
 
-📌 Task Overview
+📌 Task Overview :
 TASK 1: Automate Code Deployment Using CI/CD Pipeline (GitHub Actions)
 
-🎯 Objective
+🎯 Objective :
 Set up a CI/CD pipeline to build and deploy a sample Node.js web app.
 
-🧰 Tools & Technologies
+🧰 Tools & Technologies :
 GitHub Actions – CI/CD automation
 Node.js – Sample web application
 Docker – Containerization
 DockerHub – Image registry
 
-📁 Project Structure
+📁 Project Structure :
 
 .
 ├── index.js
@@ -22,7 +22,7 @@ DockerHub – Image registry
     └── workflows
         └── main.yml
 
-⚙️ CI/CD Workflow Summary
+⚙️ CI/CD Workflow Summary :
 This workflow:
 
 ✅ Triggers on push to main branch
@@ -33,11 +33,11 @@ This workflow:
 ✅ Pushes the image to DockerHub
 
 
-📦 Deliverables
+📦 Deliverables :
 GitHub repository with CI/CD workflow defined in .github/workflows/main.yml
 DockerHub image: your-username/my-node-app
 
-## 🧪 Sample Output
+## 🧪 Sample Output :
 
 When the app runs, it logs the following:
 
