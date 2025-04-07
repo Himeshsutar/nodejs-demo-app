@@ -27,11 +27,12 @@ jobs:
       - name: Build Docker image
         run: docker build -t ${{ secrets.DOCKER_USERNAME }}/my-node-app .
 
-      # 🔍 TEMPORARY: Debug token length
-      - name: Debug Docker token length
-        run: echo "Token length: ${#DOCKER_TOKEN}"
-        env:
-          DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
-
+      # ✅ Login to DockerHub using token
       - name: Log in to DockerHub
-        run: echo "${{ secrets.DOCKER_TOKEN }}" | docker login_
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
+        run: echo "$DOCKER_TOKEN" | docker login -u "$DOCKER_USERNAME" --password-stdin
+
+      - name: Push Docker image to DockerHub
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/my-node-app
