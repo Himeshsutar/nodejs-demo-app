@@ -44,6 +44,32 @@ This workflow:
 
 ✅ Pushes the image to DockerHub
 
+---
+
+## 🛠 How It Works
+
+After pushing code to the `main` branch:
+
+1. Go to your **GitHub repository**
+
+2. Click on the **Actions** tab
+ 
+3. You'll see your CI/CD pipeline running automatically 🎉
+    
+4. The pipeline goes through the following steps:
+   
+   - ✅ **Checkout** – Clones the repo to the runner
+     
+   - ✅ **Node setup** – Installs Node.js (v18)
+     
+   - ✅ **Install** – Runs `npm install` to install dependencies
+   
+   - ✅ **Test** – Executes unit tests using `npm test`
+     
+   - ✅ **Docker build** – Builds the Docker image
+     
+   - ✅ **Docker push** – Pushes the image to DockerHub  
+
 
 📦 Deliverables :
 
