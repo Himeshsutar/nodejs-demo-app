@@ -3,9 +3,10 @@ const app = express();
 const PORT = 3000;
 
 app.get('/', (req, res) => {
-  res.send('Hello from CI/CD Pipeline!');
+  res.send('✅ Hello from index.js running in Docker!');
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`Server running at http://localhost:${PORT}`);
 });
+    
